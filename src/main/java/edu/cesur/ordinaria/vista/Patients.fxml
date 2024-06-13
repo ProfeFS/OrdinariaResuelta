@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="334.0" prefWidth="226.0" spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cesur.ordinaria.controller.PatientsController">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25" />
+    </padding>
+    <Label fx:id="doctorNameLabel" text="Doctor: " />
+    <Label text="Datos del Paciente:" />
+    <TextField fx:id="txtPatientName" disable="true" promptText="Nombre" />
+    <TextField fx:id="txtPatientSeverity" disable="true" promptText="Gravedad" />
+    <TextField fx:id="txtPatientStatus" disable="true" promptText="Estado" />
+    <TextField fx:id="txtPatientObservation" disable="true" promptText="Observación" />
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#attendPatient" text="Atender paciente" />
+        <Button onAction="#savePatient" text="Guardar" />
+    </HBox>
+   <HBox alignment="CENTER" spacing="10">
+      <children>
+         <Button onAction="#savePatient" text="Siguiente" />
+         <Button text="Volver" />
+      </children>
+   </HBox>
+</VBox>
